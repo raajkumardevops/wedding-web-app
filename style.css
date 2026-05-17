@@ -933,19 +933,41 @@ p{
   }
 
   .gallery-card{
-.gallery-card{
 
-  min-width:100%;
+  min-width:82%;
 
-  max-width:100%;
+  max-width:82%;
 
-  flex:0 0 100%;
+  flex:0 0 82%;
+
+  height:420px;
+
+  scroll-snap-align:center;
 }
-  }
+.gallery-track{
 
-  .gallery-track{
-    gap:14px;
-  }
+  display:flex;
+
+  gap:16px;
+
+  overflow-x:auto;
+
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+
+  scrollbar-width:none;
+
+  -webkit-overflow-scrolling:touch;
+
+  touch-action:pan-x;
+
+  padding:10px 12px 14px;
+
+  width:100%;
+
+  scroll-snap-type:x proximity;
+}
 
   .popup-image{
 
@@ -1336,12 +1358,6 @@ p{
 /* ================================================= */
 /* ================= FINAL IOS FIX ================= */
 /* ================================================= */
-
-.gallery-section,
-.gallery-wrapper,
-.gallery-track{
-  overflow-x:hidden;
-}
 
 @media(max-width:768px){
 
