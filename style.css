@@ -16,13 +16,20 @@
 
 html{
   scroll-behavior:smooth;
+  width:100%;
+  overflow-x:hidden;
 }
 
 body{
   background:#090904;
   color:#f4ead8;
   font-family:'EB Garamond', serif;
+
+  width:100%;
+
   overflow-x:hidden;
+
+  -webkit-text-size-adjust:100%;
 }
 
 /* ================================================= */
@@ -31,6 +38,10 @@ body{
 
 img{
   width:100%;
+  max-width:100%;
+
+  height:auto;
+
   display:block;
 }
 
@@ -492,7 +503,7 @@ p{
 .events-header{
   text-align:center;
 
-  margin-bottom:70px;
+  margin-bottom:50px;
 }
 
 .events-tag{
@@ -505,6 +516,8 @@ p{
   text-transform:uppercase;
 
   margin-bottom:12px;
+
+  margin-top:10px;
 
   display:block;
 }
@@ -697,6 +710,9 @@ p{
 
 .gallery-wrapper{
   position:relative;
+    width:100%;
+
+  overflow:hidden;
 }
 
 .gallery-track{
@@ -706,11 +722,17 @@ p{
 
   overflow-x:auto;
 
+  overflow-y:hidden;
+
   scroll-behavior:smooth;
 
   scrollbar-width:none;
 
   padding-bottom:10px;
+
+  -webkit-overflow-scrolling:touch;
+
+  scroll-snap-type:x mandatory;
 }
 
 .gallery-track::-webkit-scrollbar{
@@ -739,6 +761,8 @@ p{
   background:#111208;
 
   transition:0.4s ease;
+
+ scroll-snap-align:center;
 }
 
 .gallery-card:hover{
@@ -1110,7 +1134,10 @@ p{
   .gallery-btn{
     display:none;
   }
+  .gallery-heading h2{
 
+    margin-bottom:14px;
+  }
   .gallery-card{
     min-width:85%;
   }
@@ -1158,6 +1185,18 @@ p{
 
     gap:4px;
   }
+  .events-section{
+  padding-top:40px;
+}
+
+.events-header{
+  margin-bottom:px;
+}
+
+.events-header h2{
+  margin-top:10px;
+  margin-bottom:14px;
+}
 
 }
 
@@ -1247,4 +1286,21 @@ p{
     display:none;
   }
 
+  .events-tag{
+    margin-top:60px
+  }
+
+}
+
+/* ================================================= */
+/* ================= IOS FIX ======================= */
+/* ================================================= */
+
+html,
+body{
+  position:relative;
+
+  max-width:100%;
+
+  overflow-x:hidden;
 }
