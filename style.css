@@ -12,6 +12,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  max-width:100%;
 }
 
 html{
@@ -26,10 +27,13 @@ body{
   font-family:'EB Garamond', serif;
 
   width:100%;
-
   overflow-x:hidden;
 
   -webkit-text-size-adjust:100%;
+
+  position:relative;
+
+  overscroll-behavior-x:none;
 }
 
 /* ================================================= */
@@ -39,9 +43,7 @@ body{
 img{
   width:100%;
   max-width:100%;
-
   height:auto;
-
   display:block;
 }
 
@@ -255,12 +257,13 @@ p{
 
   text-align:center;
 
-  padding:40px 20px;
+  padding:40px 15px;
 }
 
 .tamil-title{
+
   font-size:
-  clamp(34px,6vw,58px);
+  clamp(26px,5vw,58px);
 
   color:#d8ae3f;
 
@@ -272,6 +275,12 @@ p{
 
   text-shadow:
   0 0 20px rgba(255,210,100,0.12);
+
+  white-space:nowrap;
+
+  width:100%;
+
+  text-align:center;
 }
 
 .hero-content h1{
@@ -347,20 +356,12 @@ p{
   0 0 25px rgba(216,174,63,0.18);
 }
 
-.primary-btn:hover{
-  transform:translateY(-2px);
-}
-
 .secondary-btn{
   background:transparent;
 
   border:1px solid rgba(216,174,63,0.65);
 
   color:#d8ae3f;
-}
-
-.secondary-btn:hover{
-  background:rgba(216,174,63,0.08);
 }
 
 /* ================================================= */
@@ -376,18 +377,6 @@ p{
 
   gap:
   clamp(40px,6vw,80px);
-
-  background:
-  radial-gradient(
-    circle at top left,
-    rgba(120,70,10,0.08),
-    transparent 30%
-  ),
-  #090904;
-}
-
-.journey-left{
-  max-width:560px;
 }
 
 .journey-left h2{
@@ -396,18 +385,11 @@ p{
 
   margin-bottom:28px;
 
-  color:#f4ead8;
-
   font-family:'Playfair Display', serif;
 }
 
 .journey-left p{
   color:#d8ccb7;
-
-  font-size:
-  clamp(15px,1.7vw,17px);
-
-  line-height:1.95;
 
   margin-bottom:24px;
 }
@@ -420,36 +402,8 @@ p{
   gap:18px;
 
   margin-top:42px;
-}
 
-.journey-blessing span{
-  width:52px;
-  height:52px;
-
-  border-radius:14px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border:1px solid rgba(216,174,63,0.22);
-
-  background:rgba(216,174,63,0.04);
-
-  color:#d8ae3f;
-
-  font-size:22px;
-}
-
-.journey-blessing p{
-  margin:0;
-
-  color:#d8ae3f;
-
-  font-size:
-  clamp(17px,2vw,20px);
+  margin-left:20px;
 }
 
 .journey-image-frame{
@@ -484,6 +438,70 @@ p{
   object-fit:cover;
 
   border-radius:20px;
+}
+
+/* ================================================= */
+/* ================= ELDERS SECTION ================ */
+/* ================================================= */
+
+.elders-section{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
+}
+
+.elders-image{
+
+  width:100%;
+
+  height:520px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:1px solid rgba(216,174,63,0.12);
+
+  background:#111108;
+
+  flex-shrink:0;
+}
+
+.elders-image img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  object-position:center;
+
+  display:block;
+}
+
+.elders-content h2{
+
+  font-size:
+  clamp(38px,5vw,58px);
+
+  margin-bottom:24px;
+
+  font-family:'Playfair Display', serif;
+}
+
+.elders-content p{
+
+  color:#d8ccb7;
+
+  line-height:1.9;
+
+  margin-bottom:26px;
 }
 
 /* ================================================= */
@@ -526,8 +544,6 @@ p{
   font-size:
   clamp(40px,5vw,58px);
 
-  color:#f4ead8;
-
   font-family:'Playfair Display', serif;
 }
 
@@ -552,12 +568,6 @@ p{
   border-radius:22px;
 
   overflow:hidden;
-
-  transition:0.4s ease;
-}
-
-.event-card:hover{
-  transform:translateY(-6px);
 }
 
 .event-card img{
@@ -598,80 +608,8 @@ p{
   font-family:'Playfair Display', serif;
 }
 
-.event-content p{
-  color:#cbbd9e;
-
-  line-height:1.8;
-
-  font-size:15px;
-
-  margin-bottom:26px;
-}
-
 /* ================================================= */
-/* ================= ELDERS SECTION ================ */
-/* ================================================= */
-
-.elders-section{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  align-items:center;
-
-  gap:
-  clamp(40px,6vw,80px);
-
-  background:
-  linear-gradient(
-    to bottom,
-    #0b0c05,
-    #111208
-  );
-}
-
-.elders-image img{
-  width:100%;
-
-  max-width:520px;
-
-  margin:auto;
-
-  border-radius:22px;
-
-  border:1px solid rgba(216,174,63,0.12);
-}
-
-.elders-content h2{
-  font-size:
-  clamp(40px,5vw,60px);
-
-  margin-bottom:24px;
-
-  font-family:'Playfair Display', serif;
-}
-
-.elders-description{
-  color:#cfc1a7;
-
-  font-size:
-  clamp(15px,1.7vw,17px);
-
-  line-height:1.9;
-
-  margin-bottom:45px;
-}
-
-.parents-grid{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:40px;
-}
-
-/* ================================================= */
-/* ================= GALLERY SECTION =============== */
+/* ================= GALLERY ======================= */
 /* ================================================= */
 
 .gallery-section{
@@ -687,6 +625,8 @@ p{
 
 .gallery-heading{
   margin-bottom:60px;
+
+  text-align:center;
 }
 
 .gallery-heading span{
@@ -707,18 +647,92 @@ p{
 
   font-family:'Playfair Display', serif;
 }
+/* ================================================= */
+/* ================= GALLERY BUTTONS =============== */
+/* ================================================= */
 
 .gallery-wrapper{
   position:relative;
-    width:100%;
+
+  width:100%;
 
   overflow:hidden;
 }
 
-.gallery-track{
+.gallery-btn{
+
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:58px;
+
+  height:58px;
+
+  border-radius:50%;
+
+  border:
+  1px solid rgba(216,174,63,0.18);
+
+  background:
+  rgba(10,10,6,0.88);
+
+  color:#d8ae3f;
+
+  font-size:26px;
+
+  cursor:pointer;
+
+  z-index:50;
+
+  backdrop-filter:blur(12px);
+
+  transition:0.3s ease;
+
   display:flex;
 
-  gap:30px;
+  align-items:center;
+
+  justify-content:center;
+
+  box-shadow:
+  0 0 25px rgba(0,0,0,0.25);
+}
+
+.gallery-btn:hover{
+
+  background:#d8ae3f;
+
+  color:#090904;
+
+  transform:
+  translateY(-50%)
+  scale(1.05);
+}
+
+/* LEFT BUTTON */
+
+.left-btn{
+  left:18px;
+}
+
+/* RIGHT BUTTON */
+
+.right-btn{
+  right:18px;
+}
+
+/* ================================================= */
+/* ================= GALLERY TRACK ================= */
+/* ================================================= */
+
+.gallery-track{
+
+  display:flex;
+
+  gap:14px;
 
   overflow-x:auto;
 
@@ -728,87 +742,70 @@ p{
 
   scrollbar-width:none;
 
-  padding-bottom:10px;
-
   -webkit-overflow-scrolling:touch;
 
-  scroll-snap-type:x mandatory;
+  touch-action:pan-x;
+
+  padding:10px 4px 14px;
+
+  width:100%;
 }
 
 .gallery-track::-webkit-scrollbar{
   display:none;
 }
+/* ================================================= */
+/* ================= GALLERY CARD ================== */
+/* ================================================= */
 
 .gallery-card{
+
   min-width:
-  clamp(250px,28vw,360px);
+  clamp(260px,28vw,360px);
 
   height:
-  clamp(360px,45vw,520px);
+  clamp(360px,45vw,540px);
 
-  border-radius:28px;
+  border-radius:30px;
 
   overflow:hidden;
-
-  position:relative;
 
   flex-shrink:0;
 
   cursor:pointer;
 
-  border:1px solid rgba(216,174,63,0.12);
+  position:relative;
 
-  background:#111208;
+  border:
+  1px solid rgba(216,174,63,0.14);
+
+  background:#111108;
 
   transition:0.4s ease;
-
- scroll-snap-align:center;
 }
 
 .gallery-card:hover{
+
   transform:
-  translateY(-10px)
-  scale(1.02);
+  translateY(-8px);
+
+  box-shadow:
+  0 0 40px rgba(0,0,0,0.35);
 }
 
+/* IMAGE */
+
 .gallery-card img{
+
   width:100%;
+
   height:100%;
 
   object-fit:cover;
-}
 
-.gallery-btn{
-  position:absolute;
+  object-position:center;
 
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:54px;
-  height:54px;
-
-  border-radius:50%;
-
-  border:1px solid rgba(216,174,63,0.3);
-
-  background:rgba(0,0,0,0.6);
-
-  color:#d8ae3f;
-
-  font-size:24px;
-
-  cursor:pointer;
-
-  z-index:20;
-}
-
-.left-btn{
-  left:-20px;
-}
-
-.right-btn{
-  right:-20px;
+  display:block;
 }
 
 /* ================================================= */
@@ -816,54 +813,161 @@ p{
 /* ================================================= */
 
 .gallery-popup{
+
   position:fixed;
 
   inset:0;
 
-  background:rgba(0,0,0,0.92);
+  background:
+  rgba(0,0,0,0.94);
 
   display:flex;
 
-  justify-content:center;
-
   align-items:center;
 
-  z-index:999;
+  justify-content:center;
 
   opacity:0;
 
-  pointer-events:none;
+  visibility:hidden;
 
-  transition:0.4s ease;
+  transition:0.3s ease;
+
+  z-index:9999;
+
+  padding:20px;
 }
+
+/* ACTIVE */
 
 .gallery-popup.active{
+
   opacity:1;
 
-  pointer-events:all;
+  visibility:visible;
 }
+
+/* POPUP IMAGE */
 
 .popup-image{
-  max-width:85%;
 
-  max-height:85vh;
+  max-width:92%;
+
+  max-height:92vh;
 
   border-radius:24px;
+
+  object-fit:contain;
+
+  box-shadow:
+  0 0 50px rgba(0,0,0,0.5);
 }
+
+/* CLOSE BUTTON */
 
 .close-popup{
+
   position:absolute;
 
-  top:40px;
-  right:50px;
+  top:24px;
 
-  font-size:48px;
+  right:30px;
 
-  color:white;
+  width:54px;
+
+  height:54px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:
+  rgba(20,20,12,0.9);
+
+  color:#f4ead8;
+
+  font-size:34px;
 
   cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  transition:0.3s ease;
+
+  border:
+  1px solid rgba(216,174,63,0.18);
 }
 
+.close-popup:hover{
+
+  background:#d8ae3f;
+
+  color:#090904;
+}
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media(max-width:768px){
+
+  .gallery-btn{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:18px;
+  }
+
+  .left-btn{
+    left:8px;
+  }
+
+  .right-btn{
+    right:8px;
+  }
+
+  .gallery-card{
+.gallery-card{
+
+  min-width:100%;
+
+  max-width:100%;
+
+  flex:0 0 100%;
+}
+  }
+
+  .gallery-track{
+    gap:14px;
+  }
+
+  .popup-image{
+
+    max-width:96%;
+
+    max-height:80vh;
+  }
+
+  .close-popup{
+
+    width:46px;
+
+    height:46px;
+
+    font-size:28px;
+
+    top:16px;
+
+    right:16px;
+  }
+
+}
 /* ================================================= */
 /* ================= VENUE SECTION ================= */
 /* ================================================= */
@@ -877,13 +981,6 @@ p{
   clamp(40px,5vw,60px);
 
   align-items:center;
-
-  background:
-  linear-gradient(
-    to bottom,
-    #090904,
-    #111106
-  );
 }
 
 .venue-left h2{
@@ -895,50 +992,29 @@ p{
   font-family:'Playfair Display', serif;
 }
 
-.venue-description{
-  color:#d6ccb6;
-
-  line-height:1.9;
-
-  max-width:520px;
-
-  font-size:
-  clamp(15px,1.7vw,17px);
-}
-
 .venue-card{
-  margin-top:30px;
+  margin-top:34px;
 
   background:
   linear-gradient(
     145deg,
-    rgba(27,29,14,0.95),
-    rgba(12,12,7,0.96)
+    rgba(27,29,14,0.96),
+    rgba(12,12,7,0.98)
   );
 
   border:1px solid rgba(216,174,63,0.12);
 
   padding:
-  clamp(24px,4vw,40px);
+  clamp(34px,4vw,48px);
 
-  border-radius:28px;
-}
+  border-radius:34px;
 
-.venue-card h3{
-  font-size:
-  clamp(26px,3vw,36px);
+   box-shadow:
+  0 0 35px rgba(0,0,0,0.28);
 
-  margin-bottom:14px;
+  width:100%;
 
-  font-family:'Playfair Display', serif;
-}
-
-.venue-card p{
-  color:#d8ccb7;
-
-  line-height:1.9;
-
-  margin-bottom:30px;
+  max-width:640px;
 }
 
 .venue-map{
@@ -947,11 +1023,46 @@ p{
 
   border-radius:32px;
 
-  position:relative;
-
   overflow:hidden;
 
   border:1px solid rgba(216,174,63,0.12);
+}
+
+.venue-card h3{
+
+  font-size:
+  clamp(28px,3vw,38px);
+
+  margin-bottom:18px;
+
+  line-height:1.3;
+
+  color:#f4ead8;
+
+  font-family:'Playfair Display', serif;
+}
+
+.venue-card p{
+
+  color:#d8ccb7;
+
+  line-height:1.9;
+
+  font-size:
+  clamp(15px,2vw,18px);
+
+  margin-bottom:14px;
+}
+
+.venue-card .primary-btn{
+
+  margin-top:20px;
+
+  min-width:220px;
+
+  min-height:60px;
+
+  font-size:16px;
 }
 
 .map-image{
@@ -959,19 +1070,6 @@ p{
   height:100%;
 
   object-fit:cover;
-}
-
-.map-overlay{
-  position:absolute;
-
-  inset:0;
-
-  background:
-  radial-gradient(
-    circle at center,
-    rgba(216,174,63,0.10),
-    transparent 60%
-  );
 }
 
 /* ================================================= */
@@ -982,56 +1080,45 @@ p{
   position:relative;
 
   padding:
-  clamp(90px,8vw,140px)
+  90px
   20px
-  clamp(100px,8vw,120px);
+  60px;
 
   text-align:center;
 
   overflow:hidden;
 
   background:
-  radial-gradient(
-    circle at top,
-    rgba(216,174,63,0.06),
-    transparent 45%
-  ),
   linear-gradient(
     to bottom,
     #090904,
-    #111106
+    #050502
   );
 }
 
 .footer h2{
+
   font-size:
-  clamp(42px,5vw,64px);
+  clamp(42px,8vw,72px);
+
+  line-height:1.08;
 
   font-family:'Playfair Display', serif;
 
-  margin-bottom:24px;
+  color:#f4ead8;
+
+  margin-bottom:30px;
 }
 
 .footer-divider{
-  width:140px;
+  width:120px;
   height:1px;
 
   background:#d8ae3f;
 
-  margin:28px auto 40px;
-}
-
-.footer-quote{
-  max-width:700px;
-
-  margin:0 auto 50px;
-
-  color:#cfc4ad;
-
-  font-size:
-  clamp(15px,1.8vw,18px);
-
-  line-height:1.9;
+  margin:
+  0 auto
+  36px;
 }
 
 .footer-links{
@@ -1041,34 +1128,54 @@ p{
 
   flex-wrap:wrap;
 
-  gap:30px;
+  gap:24px;
 
-  margin-bottom:50px;
+  margin-bottom:48px;
 }
 
 .footer-links a{
   text-decoration:none;
 
   color:#e6dcc8;
-
-  font-size:16px;
 }
 
 .footer-date{
   color:#d8ae3f;
 
-  letter-spacing:4px;
+  letter-spacing:5px;
 
   font-size:13px;
 
-  margin-bottom:px;
+  margin-bottom:18px;
+
+  text-transform:uppercase;
+}
+.footer-links a{
+
+  text-decoration:none;
+
+  color:#f4ead8;
+
+  font-size:16px;
+
+  transition:0.3s ease;
+}
+
+.footer-links a:hover{
+
+  color:#d8ae3f;
 }
 
 .footer-copy{
-  color:rgba(228,228,204,0.55);
+
+  color:#9f947d;
 
   font-size:14px;
+
+  line-height:1.8;
 }
+
+
 
 /* ================================================= */
 /* ================= MOBILE NAV ==================== */
@@ -1085,8 +1192,7 @@ p{
 @media(max-width:992px){
 
   .journey-section,
-  .venue-section,
-  .elders-section{
+  .venue-section{
     grid-template-columns:1fr;
   }
 
@@ -1098,8 +1204,11 @@ p{
 
 @media(max-width:768px){
 
-  body{
-    padding-bottom:90px;
+  section{
+    padding-left:20px;
+    padding-right:20px;
+
+    text-align:center;
   }
 
   .desktop-nav{
@@ -1126,24 +1235,25 @@ p{
 
   .primary-btn,
   .secondary-btn{
+
     width:100%;
 
-    max-width:320px;
+    max-width:280px;
+
+    min-height:54px;
   }
 
   .gallery-btn{
     display:none;
   }
-  .gallery-heading h2{
 
-    margin-bottom:14px;
-  }
   .gallery-card{
-    min-width:85%;
-  }
 
-  .parents-grid{
-    grid-template-columns:1fr;
+    min-width:100%;
+
+    max-width:100%;
+
+    flex:0 0 100%;
   }
 
   .mobile-nav{
@@ -1185,17 +1295,26 @@ p{
 
     gap:4px;
   }
+
   .events-section{
-  padding-top:40px;
+    padding-top:40px;
+  }
+
+  .events-header h2{
+    margin-top:10px;
+    margin-bottom:14px;
+  }
+
+  .elders-section{
+
+  grid-template-columns:1fr;
+
+  gap:40px;
 }
 
-.events-header{
-  margin-bottom:px;
-}
+.elders-image{
 
-.events-header h2{
-  margin-top:10px;
-  margin-bottom:14px;
+  height:420px;
 }
 
 }
@@ -1203,104 +1322,75 @@ p{
 @media(max-width:480px){
 
   .hero-content h1{
-    font-size:54px;
-  }
+    font-size:48px;
 
-  .tamil-title{
-    font-size:34px;
+    line-height:1.08;
   }
 
   .hero-description{
     font-size:15px;
   }
 
-  .gallery-card{
-    min-width:90%;
-  }
-
 }
 
 /* ================================================= */
-/* =============== MOBILE CENTER FIX =============== */
+/* ================= FINAL IOS FIX ================= */
 /* ================================================= */
+
+.gallery-section,
+.gallery-wrapper,
+.gallery-track{
+  overflow-x:hidden;
+}
 
 @media(max-width:768px){
 
-  section{
-    padding-left:20px;
-    padding-right:20px;
-
-    text-align:center;
-  }
-
-  .hero-content,
-  .journey-left,
-  .venue-left,
-  .elders-content,
-  .events-header,
-  .gallery-heading,
   .footer{
-    margin:auto;
 
-    text-align:center;
+    padding:
+    80px
+    20px
+    40px;
   }
 
-  .journey-left,
-  .venue-left,
-  .elders-content{
-    max-width:100%;
+  .footer h2{
+
+    font-size:54px;
   }
 
-  .hero-buttons{
-    justify-content:center;
+  .footer-quote{
 
-    align-items:center;
-  }
+    font-size:15px;
 
-  .journey-blessing{
-    justify-content:center;
+    line-height:1.9;
+
+    margin-bottom:36px;
   }
 
   .footer-links{
-    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:40px;
   }
 
-  .event-content,
-  .venue-card{
-    text-align:center;
+  .footer-links a{
+
+    font-size:15px;
   }
 
-  .gallery-heading{
-    display:flex;
+  .footer-date{
 
-    flex-direction:column;
+    letter-spacing:4px;
 
-    align-items:center;
+    line-height:1.8;
   }
 
-  .venue-card .primary-btn{
-    margin:auto;
+  .footer-copy{
+
+    font-size:13px;
+
+    line-height:1.7;
   }
 
-  .desktop-nav{
-    display:none;
-  }
-
-  .events-tag{
-    margin-top:60px
-  }
-
-}
-
-/* ================================================= */
-/* ================= IOS FIX ======================= */
-/* ================================================= */
-
-html,
-body{
-  position:relative;
-
-  max-width:100%;
-
-  overflow-x:hidden;
 }

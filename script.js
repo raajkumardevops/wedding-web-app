@@ -114,15 +114,19 @@ track.addEventListener("mousemove", (e) => {
 /* ================= POPUP ========================= */
 /* ================================================= */
 
-const cards = document.querySelectorAll(".gallery-card img");
+const cards =
+document.querySelectorAll(".gallery-card img");
 
-const popup = document.querySelector(".gallery-popup");
+const popup =
+document.querySelector(".gallery-popup");
 
-const popupImage = document.querySelector(".popup-image");
+const popupImage =
+document.querySelector(".popup-image");
 
-const closePopup = document.querySelector(".close-popup");
+const closePopup =
+document.querySelector(".close-popup");
 
-/* OPEN POPUP */
+/* OPEN */
 
 cards.forEach((card) => {
 
@@ -148,10 +152,9 @@ closePopup.addEventListener("click", () => {
 
 popup.addEventListener("click", (e) => {
 
-  if (e.target === popup) {
+  if(e.target === popup){
 
     popup.classList.remove("active");
-
   }
 
 });
