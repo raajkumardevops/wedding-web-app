@@ -1,4 +1,6 @@
+/* ================================================= */
 /* ================= SCROLL REVEAL ================= */
+/* ================================================= */
 
 const sections = document.querySelectorAll("section");
 
@@ -18,7 +20,9 @@ window.addEventListener("scroll", () => {
 
 });
 
-/* ================= GALLERY ================= */
+/* ================================================= */
+/* ================= GALLERY ======================= */
+/* ================================================= */
 
 const track = document.querySelector(".gallery-track");
 
@@ -46,57 +50,69 @@ leftBtn.addEventListener("click", () => {
 
 });
 
-/* AUTO INFINITE SCROLL */
+/* ================================================= */
+/* ============ MANUAL DRAG SCROLL ================= */
+/* ================================================= */
 
-let autoScroll = setInterval(() => {
+let isDragging = false;
 
-  track.scrollBy({
-    left: 1,
-    behavior: "smooth"
-  });
+let startX;
 
-  if (
-    track.scrollLeft + track.clientWidth >=
-    track.scrollWidth - 5
-  ) {
+let scrollLeft;
 
-    track.scrollLeft = 0;
+/* MOUSE DOWN */
 
-  }
+track.addEventListener("mousedown", (e) => {
 
-}, 20);
+  isDragging = true;
 
-/* STOP AUTO SCROLL ON HOVER */
+  track.classList.add("dragging");
 
-track.addEventListener("mouseenter", () => {
+  startX = e.pageX - track.offsetLeft;
 
-  clearInterval(autoScroll);
+  scrollLeft = track.scrollLeft;
 
 });
+
+/* MOUSE LEAVE */
 
 track.addEventListener("mouseleave", () => {
 
-  autoScroll = setInterval(() => {
+  isDragging = false;
 
-    track.scrollBy({
-      left: 1,
-      behavior: "smooth"
-    });
-
-    if (
-      track.scrollLeft + track.clientWidth >=
-      track.scrollWidth - 5
-    ) {
-
-      track.scrollLeft = 0;
-
-    }
-
-  }, 20);
+  track.classList.remove("dragging");
 
 });
 
-/* ================= POPUP ================= */
+/* MOUSE UP */
+
+track.addEventListener("mouseup", () => {
+
+  isDragging = false;
+
+  track.classList.remove("dragging");
+
+});
+
+/* MOUSE MOVE */
+
+track.addEventListener("mousemove", (e) => {
+
+  if (!isDragging) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - track.offsetLeft;
+
+  const walk = (x - startX) * 1.5;
+
+  track.scrollLeft = scrollLeft - walk;
+
+});
+
+/* ================================================= */
+/* ================= POPUP ========================= */
+/* ================================================= */
 
 const cards = document.querySelectorAll(".gallery-card img");
 
