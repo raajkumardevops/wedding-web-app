@@ -1,4 +1,10 @@
 /* ================================================= */
+/* ================= GOOGLE FONTS ================== */
+/* ================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+/* ================================================= */
 /* ================= GLOBAL RESET ================== */
 /* ================================================= */
 
@@ -14,9 +20,50 @@ html{
 
 body{
   background:#090904;
-  color:#e4e4cc;
+  color:#f4ead8;
   font-family:'EB Garamond', serif;
   overflow-x:hidden;
+}
+
+/* ================================================= */
+/* ================= GLOBAL ======================== */
+/* ================================================= */
+
+img{
+  width:100%;
+  display:block;
+}
+
+section{
+  width:100%;
+
+  padding:
+  clamp(90px,8vw,140px)
+  clamp(20px,6vw,90px);
+}
+
+.section-tag{
+  display:inline-block;
+
+  color:#d8ae3f;
+
+  font-size:13px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  margin-bottom:22px;
+
+  font-weight:600;
+}
+
+h1,h2,h3,h4{
+  line-height:1.1;
+}
+
+p{
+  line-height:1.8;
 }
 
 /* ================================================= */
@@ -25,13 +72,20 @@ body{
 
 .navbar{
   position:fixed;
+
   top:0;
+  left:0;
+
   width:100%;
 
-  padding:24px 60px;
+  padding:
+  clamp(16px,2vw,24px)
+  clamp(20px,5vw,60px);
 
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
 
   z-index:1000;
@@ -47,8 +101,11 @@ body{
 }
 
 .logo{
-  font-size:42px;
+  font-size:
+  clamp(28px,4vw,42px);
+
   color:#d8ae3f;
+
   font-weight:700;
 
   text-shadow:
@@ -57,13 +114,19 @@ body{
 
 .desktop-nav{
   display:flex;
-  gap:40px;
+
+  gap:
+  clamp(18px,3vw,40px);
 }
 
 .desktop-nav a{
   text-decoration:none;
+
   color:#f4ead8;
-  font-size:16px;
+
+  font-size:
+  clamp(14px,1.5vw,16px);
+
   transition:0.3s ease;
 }
 
@@ -73,8 +136,12 @@ body{
 
 .nav-icons{
   display:flex;
-  gap:20px;
+
+  gap:18px;
+
   color:#d8ae3f;
+
+  font-size:20px;
 }
 
 /* ================================================= */
@@ -87,10 +154,14 @@ body{
   min-height:100vh;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   overflow:hidden;
+
+  padding-top:120px;
 
   background:
   radial-gradient(
@@ -102,12 +173,14 @@ body{
 
 .hero-bg{
   position:absolute;
+
   inset:0;
 
   width:100%;
   height:100%;
 
   object-fit:cover;
+
   object-position:center;
 
   opacity:0.48;
@@ -123,6 +196,7 @@ body{
 
 .hero-overlay{
   position:absolute;
+
   inset:0;
 
   background:
@@ -151,16 +225,21 @@ body{
 
 .hero-content{
   position:relative;
+
   z-index:5;
 
   width:100%;
-  max-width:900px;
+
+  max-width:1000px;
 
   margin:auto;
 
   display:flex;
+
   flex-direction:column;
+
   align-items:center;
+
   justify-content:center;
 
   text-align:center;
@@ -169,7 +248,9 @@ body{
 }
 
 .tamil-title{
-  font-size:58px;
+  font-size:
+  clamp(34px,6vw,58px);
+
   color:#d8ae3f;
 
   margin-bottom:14px;
@@ -183,55 +264,73 @@ body{
 }
 
 .hero-content h1{
-  font-size:82px;
+  font-size:
+  clamp(54px,9vw,92px);
 
-  line-height:1.05;
+  line-height:1.02;
 
   font-family:'Playfair Display', serif;
 
   color:#f4ead8;
 
   margin-bottom:24px;
-
-  text-shadow:
-  0 0 20px rgba(255,220,120,0.08);
 }
 
 .hero-description{
-  max-width:720px;
+  max-width:760px;
 
   color:#ddd2bc;
 
-  font-size:18px;
+  font-size:
+  clamp(15px,2vw,19px);
 
-  line-height:1.8;
+  line-height:1.9;
 
   margin-bottom:40px;
 }
 
 .hero-buttons{
   display:flex;
-  gap:24px;
 
-  margin-top:10px;
+  gap:22px;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+}
+
+.primary-btn,
+.secondary-btn{
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-decoration:none;
+
+  border-radius:50px;
+
+  padding:
+  16px
+  clamp(28px,4vw,44px);
+
+  min-height:58px;
+
+  font-size:
+  clamp(14px,1.5vw,16px);
+
+  font-weight:600;
+
+  transition:0.3s ease;
 }
 
 .primary-btn{
   background:#d8ae3f;
+
   color:#090904;
 
   border:none;
-
-  padding:18px 42px;
-
-  border-radius:50px;
-
-  cursor:pointer;
-
-  font-size:15px;
-  font-weight:600;
-
-  transition:0.3s ease;
 
   box-shadow:
   0 0 25px rgba(216,174,63,0.18);
@@ -247,57 +346,10 @@ body{
   border:1px solid rgba(216,174,63,0.65);
 
   color:#d8ae3f;
-
-  padding:18px 42px;
-
-  border-radius:50px;
-
-  cursor:pointer;
-
-  font-size:15px;
-  font-weight:600;
-
-  transition:0.3s ease;
 }
 
 .secondary-btn:hover{
   background:rgba(216,174,63,0.08);
-}
-
-.explore-text{
-  margin-top:90px;
-
-  color:#c7a23d;
-
-  letter-spacing:6px;
-
-  font-size:12px;
-
-  opacity:0.8;
-}
-
-/* ================================================= */
-/* ================= GLOBAL SECTION ================= */
-/* ================================================= */
-
-section{
-  padding:120px 80px;
-}
-
-.section-tag{
-  display:inline-block;
-
-  color:#d8ae3f;
-
-  font-size:13px;
-
-  letter-spacing:3px;
-
-  text-transform:uppercase;
-
-  margin-bottom:22px;
-
-  font-weight:600;
 }
 
 /* ================================================= */
@@ -305,16 +357,14 @@ section{
 /* ================================================= */
 
 .journey-section{
-  position:relative;
-
   display:grid;
+
   grid-template-columns:1fr 1fr;
 
   align-items:center;
 
-  gap:80px;
-
-  padding:140px 90px;
+  gap:
+  clamp(40px,6vw,80px);
 
   background:
   radial-gradient(
@@ -330,9 +380,8 @@ section{
 }
 
 .journey-left h2{
-  font-size:60px;
-
-  line-height:1.05;
+  font-size:
+  clamp(40px,5vw,64px);
 
   margin-bottom:28px;
 
@@ -344,15 +393,17 @@ section{
 .journey-left p{
   color:#d8ccb7;
 
-  font-size:17px;
+  font-size:
+  clamp(15px,1.7vw,17px);
 
   line-height:1.95;
 
-  margin-bottom:26px;
+  margin-bottom:24px;
 }
 
 .journey-blessing{
   display:flex;
+
   align-items:center;
 
   gap:18px;
@@ -367,7 +418,9 @@ section{
   border-radius:14px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   border:1px solid rgba(216,174,63,0.22);
@@ -384,20 +437,18 @@ section{
 
   color:#d8ae3f;
 
-  font-size:20px;
-}
-
-.journey-right{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  font-size:
+  clamp(17px,2vw,20px);
 }
 
 .journey-image-frame{
   position:relative;
 
   width:100%;
+
   max-width:520px;
+
+  margin:auto;
 
   padding:16px;
 
@@ -411,29 +462,24 @@ section{
   );
 
   border:1px solid rgba(216,174,63,0.18);
-
-  box-shadow:
-  0 0 45px rgba(0,0,0,0.45);
 }
 
 .journey-image-frame img{
   width:100%;
-  height:620px;
+
+  height:
+  clamp(420px,50vw,620px);
 
   object-fit:cover;
 
   border-radius:20px;
-
-  display:block;
 }
 
 /* ================================================= */
-/* ================= EVENTS SECTION ================ */
+/* ================= EVENTS ======================== */
 /* ================================================= */
 
 .events-section{
-  padding:120px 80px;
-
   background:
   radial-gradient(
     circle at top,
@@ -445,6 +491,7 @@ section{
 
 .events-header{
   text-align:center;
+
   margin-bottom:70px;
 }
 
@@ -463,7 +510,8 @@ section{
 }
 
 .events-header h2{
-  font-size:54px;
+  font-size:
+  clamp(40px,5vw,58px);
 
   color:#f4ead8;
 
@@ -476,10 +524,6 @@ section{
   grid-template-columns:repeat(2,1fr);
 
   gap:38px;
-
-  max-width:1200px;
-
-  margin:auto;
 }
 
 .event-card{
@@ -504,12 +548,10 @@ section{
 }
 
 .event-card img{
-  width:100%;
-  height:240px;
+  height:
+  clamp(220px,30vw,280px);
 
   object-fit:cover;
-
-  display:block;
 }
 
 .event-content{
@@ -535,9 +577,8 @@ section{
 }
 
 .event-content h3{
-  font-size:38px;
-
-  color:#f4ead8;
+  font-size:
+  clamp(30px,4vw,42px);
 
   margin-bottom:18px;
 
@@ -565,9 +606,8 @@ section{
 
   align-items:center;
 
-  gap:80px;
-
-  padding:130px 90px;
+  gap:
+  clamp(40px,6vw,80px);
 
   background:
   linear-gradient(
@@ -582,17 +622,16 @@ section{
 
   max-width:520px;
 
-  border-radius:22px;
+  margin:auto;
 
-  display:block;
+  border-radius:22px;
 
   border:1px solid rgba(216,174,63,0.12);
 }
 
 .elders-content h2{
-  font-size:58px;
-
-  color:#f4ead8;
+  font-size:
+  clamp(40px,5vw,60px);
 
   margin-bottom:24px;
 
@@ -602,7 +641,8 @@ section{
 .elders-description{
   color:#cfc1a7;
 
-  font-size:17px;
+  font-size:
+  clamp(15px,1.7vw,17px);
 
   line-height:1.9;
 
@@ -622,8 +662,6 @@ section{
 /* ================================================= */
 
 .gallery-section{
-  padding:140px 70px;
-
   overflow:hidden;
 
   background:
@@ -649,11 +687,10 @@ section{
 }
 
 .gallery-heading h2{
-  font-size:64px;
+  font-size:
+  clamp(40px,5vw,64px);
 
   margin-top:12px;
-
-  color:#f5ead7;
 
   font-family:'Playfair Display', serif;
 }
@@ -681,9 +718,11 @@ section{
 }
 
 .gallery-card{
-  min-width:360px;
+  min-width:
+  clamp(250px,28vw,360px);
 
-  height:520px;
+  height:
+  clamp(360px,45vw,520px);
 
   border-radius:28px;
 
@@ -706,9 +745,6 @@ section{
   transform:
   translateY(-10px)
   scale(1.02);
-
-  box-shadow:
-  0 0 40px rgba(216,174,63,0.12);
 }
 
 .gallery-card img{
@@ -765,6 +801,7 @@ section{
   display:flex;
 
   justify-content:center;
+
   align-items:center;
 
   z-index:999;
@@ -778,11 +815,13 @@ section{
 
 .gallery-popup.active{
   opacity:1;
+
   pointer-events:all;
 }
 
 .popup-image{
   max-width:85%;
+
   max-height:85vh;
 
   border-radius:24px;
@@ -801,7 +840,6 @@ section{
   cursor:pointer;
 }
 
-
 /* ================================================= */
 /* ================= VENUE SECTION ================= */
 /* ================================================= */
@@ -811,11 +849,10 @@ section{
 
   grid-template-columns:1fr 1.1fr;
 
-  gap:60px;
+  gap:
+  clamp(40px,5vw,60px);
 
   align-items:center;
-
-  padding:140px 80px;
 
   background:
   linear-gradient(
@@ -825,18 +862,13 @@ section{
   );
 }
 
-/* LEFT SIDE */
-
 .venue-left h2{
-  font-size:56px;
+  font-size:
+  clamp(40px,5vw,60px);
 
   margin-bottom:24px;
 
-  color:#f4ead8;
-
   font-family:'Playfair Display', serif;
-
-  line-height:1.1;
 }
 
 .venue-description{
@@ -846,12 +878,9 @@ section{
 
   max-width:520px;
 
-  font-size:17px;
-
-  margin-bottom:10px;
+  font-size:
+  clamp(15px,1.7vw,17px);
 }
-
-/* VENUE CARD */
 
 .venue-card{
   margin-top:30px;
@@ -865,83 +894,32 @@ section{
 
   border:1px solid rgba(216,174,63,0.12);
 
-  padding:40px 40px 34px;
+  padding:
+  clamp(24px,4vw,40px);
 
   border-radius:28px;
-
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-  0 0 40px rgba(0,0,0,0.35);
 }
 
-/* VENUE TITLE */
-
 .venue-card h3{
-  font-size:34px;
-
-  line-height:1.35;
+  font-size:
+  clamp(26px,3vw,36px);
 
   margin-bottom:14px;
 
-  color:#f4ead8;
-
   font-family:'Playfair Display', serif;
 }
-
-/* ADDRESS */
 
 .venue-card p{
   color:#d8ccb7;
 
   line-height:1.9;
 
-  font-size:16px;
-
   margin-bottom:30px;
 }
 
-/* BUTTON */
-
-.venue-card .primary-btn{
-  display:inline-flex;
-
-  align-items:center;
-  justify-content:center;
-
-  padding:16px 34px;
-
-  min-width:220px;
-
-  border-radius:50px;
-
-  font-size:15px;
-
-  font-weight:600;
-
-  text-decoration:none;
-
-  background:#d8ae3f;
-
-  color:#090904;
-
-  transition:0.3s ease;
-
-  box-shadow:
-  0 0 25px rgba(216,174,63,0.18);
-}
-
-.venue-card .primary-btn:hover{
-  transform:translateY(-2px);
-
-  box-shadow:
-  0 0 35px rgba(216,174,63,0.28);
-}
-
-/* MAP CARD */
-
 .venue-map{
-  height:520px;
+  height:
+  clamp(380px,50vw,520px);
 
   border-radius:32px;
 
@@ -950,29 +928,14 @@ section{
   overflow:hidden;
 
   border:1px solid rgba(216,174,63,0.12);
-
-  box-shadow:
-  0 0 40px rgba(0,0,0,0.35);
 }
-
-/* MAP IMAGE */
 
 .map-image{
   width:100%;
   height:100%;
 
   object-fit:cover;
-
-  object-position:center;
-
-  display:block;
-
-  filter:
-  brightness(0.9)
-  contrast(1.05);
 }
-
-/* GOLD GLOW OVERLAY */
 
 .map-overlay{
   position:absolute;
@@ -980,59 +943,13 @@ section{
   inset:0;
 
   background:
-
   radial-gradient(
     circle at center,
     rgba(216,174,63,0.10),
     transparent 60%
-  ),
-
-  linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.35)
   );
 }
 
-/* ================================================= */
-/* ================= MOBILE ======================== */
-/* ================================================= */
-
-@media(max-width:768px){
-
-  .venue-section{
-    grid-template-columns:1fr;
-
-    gap:40px;
-
-    padding:100px 20px;
-  }
-
-  .venue-left h2{
-    font-size:40px;
-  }
-
-  .venue-card{
-    padding:30px 26px;
-  }
-
-  .venue-card h3{
-    font-size:28px;
-  }
-
-  .venue-card p{
-    font-size:15px;
-  }
-
-  .venue-card .primary-btn{
-    width:100%;
-  }
-
-  .venue-map{
-    height:400px;
-  }
-
-}
 /* ================================================= */
 /* ================= FOOTER ======================== */
 /* ================================================= */
@@ -1040,7 +957,10 @@ section{
 .footer{
   position:relative;
 
-  padding:140px 20px 80px;
+  padding:
+  clamp(90px,8vw,140px)
+  20px
+  clamp(100px,8vw,120px);
 
   text-align:center;
 
@@ -1060,9 +980,8 @@ section{
 }
 
 .footer h2{
-  font-size:64px;
-
-  color:#f4ead8;
+  font-size:
+  clamp(42px,5vw,64px);
 
   font-family:'Playfair Display', serif;
 
@@ -1085,7 +1004,8 @@ section{
 
   color:#cfc4ad;
 
-  font-size:18px;
+  font-size:
+  clamp(15px,1.8vw,18px);
 
   line-height:1.9;
 }
@@ -1097,9 +1017,9 @@ section{
 
   flex-wrap:wrap;
 
-  gap:36px;
+  gap:30px;
 
-  margin-bottom:60px;
+  margin-bottom:50px;
 }
 
 .footer-links a{
@@ -1127,130 +1047,136 @@ section{
 }
 
 /* ================================================= */
+/* ================= MOBILE NAV ==================== */
+/* ================================================= */
+
+.mobile-nav{
+  display:none;
+}
+
+/* ================================================= */
 /* ================= RESPONSIVE ==================== */
 /* ================================================= */
 
-@media (max-width:992px){
-
-  section{
-    padding:100px 30px;
-  }
+@media(max-width:992px){
 
   .journey-section,
   .venue-section,
   .elders-section{
     grid-template-columns:1fr;
-    gap:60px;
   }
 
   .event-grid{
     grid-template-columns:1fr;
   }
 
-  .hero-content h1{
-    font-size:68px;
-  }
-
-  .tamil-title{
-    font-size:48px;
-  }
-
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
   body{
     padding-bottom:90px;
-  }
-
-  section{
-    padding:90px 20px;
-  }
-
-  .navbar{
-    padding:18px 20px;
   }
 
   .desktop-nav{
     display:none;
   }
 
-  .logo{
-    font-size:28px;
+  .navbar{
+    padding:18px 20px;
   }
 
   .hero-section{
-    padding:120px 20px 80px;
-  }
+    min-height:auto;
 
-  .tamil-title{
-    font-size:34px;
-  }
-
-  .hero-content h1{
-    font-size:54px;
-  }
-
-  .hero-description{
-    font-size:15px;
+    padding-bottom:90px;
   }
 
   .hero-buttons{
     flex-direction:column;
+
     width:100%;
+
     align-items:center;
   }
 
   .primary-btn,
   .secondary-btn{
     width:100%;
-    max-width:300px;
-  }
 
-  .journey-left h2,
-  .venue-left h2,
-  .elders-content h2,
-  .events-header h2,
-  .gallery-heading h2,
-  .footer h2{
-    font-size:38px;
-  }
-
-  .journey-image-frame img{
-    height:420px;
-  }
-
-  .gallery-section{
-    padding:100px 20px;
-  }
-
-  .gallery-card{
-    min-width:85%;
-    height:420px;
+    max-width:320px;
   }
 
   .gallery-btn{
     display:none;
   }
 
-  .popup-image{
-    width:92%;
+  .gallery-card{
+    min-width:85%;
   }
 
-  .event-card img{
-    height:220px;
+  .parents-grid{
+    grid-template-columns:1fr;
   }
 
-  .venue-map{
-    height:400px;
+  .mobile-nav{
+    position:fixed;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:14px 10px;
+
+    background:#090904;
+
+    border-top:
+    1px solid rgba(216,174,63,0.12);
+
+    z-index:999;
   }
 
-  .footer{
-    padding:100px 20px 120px;
+  .mobile-nav a{
+    text-decoration:none;
+
+    color:#d8ae3f;
+
+    font-size:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:4px;
   }
 
-  .footer-links{
-    gap:18px;
+}
+
+@media(max-width:480px){
+
+  .hero-content h1{
+    font-size:54px;
+  }
+
+  .tamil-title{
+    font-size:34px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .gallery-card{
+    min-width:90%;
   }
 
 }
